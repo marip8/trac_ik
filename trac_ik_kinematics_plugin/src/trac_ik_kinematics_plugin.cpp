@@ -352,6 +352,10 @@ bool TRAC_IKKinematicsPlugin::searchPositionIK(const geometry_msgs::Pose &ik_pos
     bounds.rot.y(std::numeric_limits<float>::max());
     bounds.rot.z(std::numeric_limits<float>::max());
   }
+  else
+  {
+    bounds.rot.z(std::numeric_limits<float>::max());
+  }
 
   double epsilon = 1e-5;  //Same as MoveIt's KDL plugin
 
